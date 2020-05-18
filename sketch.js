@@ -17,8 +17,9 @@ var tomato,tomatoImg;
 var counter;
 var board,boardImg;
 var dash;
-var customer;
+var customer,customer1;
 var rand;
+var count1=0;
 
 
 
@@ -49,6 +50,23 @@ function setup() {
   apply=new Apply();
  counter=new Counter();
  customer=new Customer();
+  customer1=createSprite(random(800,displayWidth-250),displayHeight-450,50,50);
+customer1.visible=false;
+ rand=Math.round(random(1,3));
+ console.log(rand);
+ if (rand===1)
+ {
+   customer1.addImage('customer1Img',customer1Img)
+ }
+ if(rand===2)
+ {
+   customer1.addImage('customer2Img',customer2Img)
+ }
+ 
+ if(rand===3)
+ {
+   customer1.addImage('customer4Img',customer4Img)
+ }
 }
 
 function draw() {
@@ -66,7 +84,15 @@ background(bkgImg);
     
   background(bkgImg);
   counter.display();
-  customer.display();
+  customer1.visible=true;
+  onion.mouseUpdate=function(){
+    if(mouseIsPressed===true){
+      console.log(count1);count1+=1;
+  
+    }
   }
+  }
+  
   drawSprites();
 }
+

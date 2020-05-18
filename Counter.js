@@ -2,10 +2,11 @@ class Counter{
     constructor(){
         
     }
-    
+   
+
 display(){
     var onion=createSprite(95,displayHeight-70,50,50);
-    onion.addImage('onionImg',onionImg)
+   // onion.addImage('onionImg',onionImg)
     var redPepper=createSprite(265,displayHeight-70,50,50);
     redPepper.addImage('redPepperImg',redPepperImg)
     var greenPepper=createSprite(435,displayHeight-70,50,50);
@@ -21,6 +22,9 @@ board.addImage('boardImg',boardImg);
 var dash=createSprite(displayWidth/2,displayHeight-350,displayWidth,50);
 dash.shapeColor='brown';
 
-    
+
 }
+
+
+
 }
